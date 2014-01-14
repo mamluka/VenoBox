@@ -111,11 +111,11 @@
                             loadYoutube();
                         } else {
 
-                            if (obj.data('caption'))
-                                content.append($('<h1></h1>').html(obj.data('caption')));
-
                             var image = $('<img/>').attr('src', dest);
                             content.append(image);
+
+                            if (obj.data('caption'))
+                                content.append($('<h1></h1>').html(obj.data('caption')));
 
                             preloadFirst();
                         }

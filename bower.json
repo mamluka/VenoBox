@@ -1,12 +1,12 @@
 {
   "name": "venobox",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "homepage": "http://lab.veno.it/venobox/",
   "authors": [
     "Nicola Franchini"
   ],
   "description": "Responsive jQuery modal window plugin",
-  "main": ["venobox/venobox.min.js","venobox/venobox.css"],
+  "main": ["venobox/venobox.js","venobox/venobox.css"],
   "license": "Creative Commons Attribution 3.0 License",
   "ignore": [
     "**/.*",

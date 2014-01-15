@@ -192,7 +192,7 @@
                                 } else if (theprev.data('type') == 'vimeo') {
                                     loadVimeo();
                                 } else {
-                                    loadImage(obj)
+                                    loadImage(theprev)
                                 }
                                 obj = theprev;
                                 checknav();
@@ -233,7 +233,7 @@
                                 } else if (thenext.data('type') == 'vimeo') {
                                     loadVimeo();
                                 } else {
-                                    loadImage(obj)
+                                    loadImage(thenext)
                                 }
                                 obj = thenext;
                                 checknav();
@@ -274,7 +274,7 @@
                             } else if (thenext.data('type') == 'vimeo') {
                                 loadVimeo();
                             } else {
-                                loadImage(obj)
+                                loadImage(thenext)
                             }
                             obj = thenext;
                             checknav();
@@ -313,7 +313,7 @@
                             } else if (theprev.data('type') == 'vimeo') {
                                 loadVimeo();
                             } else {
-                                loadImage(obj)
+                                loadImage(theprev)
                             }
                             obj = theprev;
                             checknav();

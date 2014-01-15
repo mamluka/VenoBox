@@ -88,7 +88,7 @@
                     } else {
                         vwrap.css({
                             'position': 'fixed',
-                            'top': top,
+                            'top': top
                         }).data('top', top);
                         $(window).scrollTop(0);
                     }
@@ -110,14 +110,7 @@
                         } else if (obj.data('type') == 'youtube') {
                             loadYoutube();
                         } else {
-
-                            var image = $('<img/>').attr('src', dest);
-                            content.append(image);
-
-                            if (obj.data('caption'))
-                                content.append($('<h1></h1>').html(obj.data('caption')));
-
-                            preloadFirst();
+                            loadImage(obj)
                         }
                     });
 
@@ -199,8 +192,7 @@
                                 } else if (theprev.data('type') == 'vimeo') {
                                     loadVimeo();
                                 } else {
-                                    content.html('<img src="' + dest + '">');
-                                    preloadFirst();
+                                    loadImage(obj)
                                 }
                                 obj = theprev;
                                 checknav();
@@ -241,8 +233,7 @@
                                 } else if (thenext.data('type') == 'vimeo') {
                                     loadVimeo();
                                 } else {
-                                    content.html('<img src="' + dest + '">');
-                                    preloadFirst();
+                                    loadImage(obj)
                                 }
                                 obj = thenext;
                                 checknav();
@@ -283,8 +274,7 @@
                             } else if (thenext.data('type') == 'vimeo') {
                                 loadVimeo();
                             } else {
-                                content.html('<img src="' + dest + '">');
-                                preloadFirst();
+                                loadImage(obj)
                             }
                             obj = thenext;
                             checknav();
@@ -323,8 +313,7 @@
                             } else if (theprev.data('type') == 'vimeo') {
                                 loadVimeo();
                             } else {
-                                content.html('<img src="' + dest + '">');
-                                preloadFirst();
+                                loadImage(obj)
                             }
                             obj = theprev;
                             checknav();
@@ -379,6 +368,16 @@
                 content.html('<div class="vbox-inline"><p>Error retrieving contents, please retry</div>');
                 updateoverlay();
             })
+    }
+
+    function loadImage(obj) {
+        var image = $('<img/>').attr('src', dest);
+        content.append(image);
+
+        if (obj.data('caption'))
+            content.append($('<h1></h1>').html(obj.data('caption')));
+
+        preloadFirst();
     }
 
     /* -------- LOAD IFRAME -------- */

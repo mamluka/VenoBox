@@ -371,6 +371,8 @@
     }
 
     function loadImage(obj) {
+        content.empty();
+
         var image = $('<img/>').attr('src', dest);
         content.append(image);
 
